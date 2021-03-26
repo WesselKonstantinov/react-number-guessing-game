@@ -1,7 +1,9 @@
+import Explanation from './Explanation';
+
 function MainContent() {
     return (
         <main>
-            <p>Main Content Placeholder</p>
+            <Explanation />
         </main>
     )
 }
