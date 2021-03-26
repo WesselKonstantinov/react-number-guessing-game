@@ -1,6 +1,7 @@
 import Explanation from './Explanation';
 import GuessField from './GuessField';
 import PreviousGuessesList from './PreviousGuessesList';
+import Feedback from './Feedback';
 
 function MainContent() {
     return (
@@ -8,6 +9,7 @@ function MainContent() {
             <Explanation />
             <GuessField />
             <PreviousGuessesList />
+            <Feedback />
         </main>
     )
 }
