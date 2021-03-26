@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <header className="game-header">
+        <header className="game__header">
             <h1>Number Guessing Game</h1>
         </header>
     )

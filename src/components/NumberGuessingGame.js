@@ -5,7 +5,7 @@ import MainContent from './MainContent';
 class NumberGuessingGame extends React.Component {
     render() {
         return (
-            <div>
+            <div class="game">
                 <Header />
                 <MainContent />
             </div>
