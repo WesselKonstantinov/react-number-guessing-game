@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from './Header';
 
 class NumberGuessingGame extends React.Component {
     render() {
         return (
-            <h1>Number Guessing Game</h1>
+            <Header />
         )
     }
 }
