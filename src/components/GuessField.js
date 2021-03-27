@@ -1,8 +1,14 @@
-function GuessField() {
+function GuessField(props) {
     return (
-        <form className="guesss-field">
-            <input type="text" placeholder="Enter a guess" className="guess-field__input" />
-            <button className="guess-field__button">Submit guess</button>
+        <form className="guesss-field" onSubmit={props.handleSubmit}>
+            <input
+                type="text"
+                name="userGuess"
+                placeholder="Enter a guess"
+                className="guess-field__input"
+                onChange={props.handleChange}
+            />
+            <button type="submit" className="guess-field__button">Submit guess</button>
         </form>
     )
 }
