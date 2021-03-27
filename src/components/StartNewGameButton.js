@@ -1,5 +1,5 @@
 function StartNewGameButton() {
-    return <button>Start new game</button>
+    return <button className="game__start-new-game-button">Start new game</button>
 }
 
 export default StartNewGameButton;

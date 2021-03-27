@@ -6,7 +6,7 @@ import StartNewGameButton from './StartNewGameButton';
 
 function MainContent() {
     return (
-        <main>
+        <main className="game__main-section">
             <Explanation />
             <GuessField />
             <PreviousGuessesList />

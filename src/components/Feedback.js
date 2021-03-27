@@ -1,5 +1,5 @@
 function Feedback() {
-    return <p>Congratulations! It took you 5 guesses!</p>
+    return <p className="game__feedback game__feedback--correct">Congratulations! It took you 5 guesses!</p>
 }
 
 export default Feedback;

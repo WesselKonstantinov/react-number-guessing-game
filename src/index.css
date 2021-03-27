@@ -8,21 +8,81 @@
 }
 
 body {
-  border: 1px solid red; /* For debugging */
-
   font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 90%;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.7;
 }
 
 /* Header Styles */
 .game__header {
+  font-size: 1.9em;
+  line-height: 1.1;
   text-align: center;
   padding: 20px;
-  background: #2C2C44;
+  margin-bottom: 15px;
+  background: #363641;
   color: #fff;
+}
+
+/* Main Content Styles */
+.game__main-section {
+  font-size: 1.6em;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+}
+
+.guess-field__input,
+.guess-field__button,
+.game__start-new-game-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.guess-field__button {
+  border: 2px solid transparent;
+  color: #fff;
+  background: #4D4DF7;
+}
+
+.game__start-new-game-button {
+  border: 2px solid #4D4DF7;
+  color: #4D4DF7;
+  background: #fff;
+}
+
+.previous-guesses__heading {
+  font-size: 1.8em;
+}
+
+.previous-guesses__list {
+  list-style-type: none;
+}
+
+.previous-guesses__list-item {
+  display: inline;
+  margin-right: 10px;
+}
+
+.game__feedback {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.game__feedback--correct {
+  background: #008000;
+  color: #fff;
+}
+
+.game__feedback--incorrect {
+  background: #ff0000;
+  color: #000;
 }
