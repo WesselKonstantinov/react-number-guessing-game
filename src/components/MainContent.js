@@ -10,12 +10,14 @@ class MainContent extends React.Component {
         super(props);
         this.state = {
             randomNumber: Math.floor(Math.random() * 100) + 1,
+            guessCount: 1,
             userGuess: '',
             previousGuesses: [],
             numberIsGuessed: false
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleChange(e) {
@@ -31,9 +33,20 @@ class MainContent extends React.Component {
         const userGuess = this.state.userGuess;
         this.setState(prevState => {
             return {
+                guessCount: prevState.guessCount + 1,
                 previousGuesses: [...prevState.previousGuesses, userGuess],
                 userGuess: ''
             };
+        });
+    }
+
+    handleClick() {
+        this.setState({
+            randomNumber: Math.floor(Math.random() * 100) + 1,
+            guessCount: 1,
+            userGuess: '',
+            previousGuesses: [],
+            numberIsGuessed: false
         });
     }
 
@@ -46,9 +59,9 @@ class MainContent extends React.Component {
                     handleSubmit={this.handleSubmit}
                     userGuess={this.state.userGuess}
                 />
-                <PreviousGuessesList previousGuesses={this.state.previousGuesses} />
-                <Feedback />
-                <StartNewGameButton />
+                {(this.state.previousGuesses.length === 0) ? null : <PreviousGuessesList previousGuesses={this.state.previousGuesses} />}
+                <Feedback numberIsGuessed={this.state.numberIsGuessed} />
+                <StartNewGameButton handleClick={this.handleClick} />
             </main>
         )
     }
