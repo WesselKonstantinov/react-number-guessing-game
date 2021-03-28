@@ -7,7 +7,6 @@ function GuessField(props) {
                 disabled={props.formIsDisabled}
                 placeholder="Enter a guess"
                 className="guess-field__input"
-                onChange={props.handleChange}
             />
             <button
                 type="submit"
@@ -15,7 +14,7 @@ function GuessField(props) {
                 disabled={props.formIsDisabled}
             >Submit guess</button>
         </form>
-    )
+    );
 }
 
 export default GuessField;

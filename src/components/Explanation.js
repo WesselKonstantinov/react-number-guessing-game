@@ -5,7 +5,7 @@ function Explanation() {
             See if you can guess it in 10 turns or fewer. We'll
             tell you if your guess was too high or too low.
         </p>
-    )
+    );
 }
 
 export default Explanation;

@@ -7,7 +7,7 @@ function NumberGuessingGame() {
             <Header />
             <MainContent />
         </div>
-    )
+    );
 }
 
 export default NumberGuessingGame;
