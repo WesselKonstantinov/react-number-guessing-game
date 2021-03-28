@@ -1,6 +1,6 @@
 function GuessField(props) {
     return (
-        <form className="guesss-field" onSubmit={props.handleSubmit}>
+        <form className="guess-field" onSubmit={props.handleSubmit}>
             <input
                 type="text"
                 name="userGuess"

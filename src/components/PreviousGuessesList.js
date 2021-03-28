@@ -5,10 +5,10 @@ function PreviousGuessesList(props) {
     const listItems = previousGuesses.map((previousGuess, index) => <ListItem key={index} value={previousGuess} />)
 
     return (
-        <section className="previous-guesses">
-            <h2 className="previous-guesses__heading">Previous guesses: </h2>
-            <ul className="previous-guesses__list">{listItems}</ul>
-        </section>
+        <>
+            <h2 className="results__heading">Previous guesses: </h2>
+            <ul className="results__list">{listItems}</ul>
+        </>
     )
 }
 

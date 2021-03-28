@@ -1,8 +1,7 @@
 import React from 'react';
 import Explanation from './Explanation';
 import GuessField from './GuessField';
-import PreviousGuessesList from './PreviousGuessesList';
-import Feedback from './Feedback';
+import Result from './Result';
 import StartNewGameButton from './StartNewGameButton';
 
 class MainContent extends React.Component {
@@ -59,8 +58,7 @@ class MainContent extends React.Component {
                     handleSubmit={this.handleSubmit}
                     userGuess={this.state.userGuess}
                 />
-                {(this.state.previousGuesses.length === 0) ? null : <PreviousGuessesList previousGuesses={this.state.previousGuesses} />}
-                <Feedback numberIsGuessed={this.state.numberIsGuessed} />
+                {(this.state.previousGuesses.length === 0) ? null : <Result previousGuesses={this.state.previousGuesses} />}
                 <StartNewGameButton handleClick={this.handleClick} />
             </main>
         )
