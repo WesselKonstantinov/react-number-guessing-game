@@ -5,7 +5,7 @@ function Result(props) {
     return (
         <section className="results">
             <PreviousGuessesList previousGuesses={props.previousGuesses} />
-            <Feedback />
+            <Feedback numberIsGuessed={props.numberIsGuessed} />
         </section>
     )
 }

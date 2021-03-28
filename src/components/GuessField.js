@@ -4,11 +4,16 @@ function GuessField(props) {
             <input
                 type="text"
                 name="userGuess"
+                disabled={props.formIsDisabled}
                 placeholder="Enter a guess"
                 className="guess-field__input"
                 onChange={props.handleChange}
             />
-            <button type="submit" className="guess-field__button">Submit guess</button>
+            <button
+                type="submit"
+                className={`guess-field__button ${(props.formIsDisabled) && 'guess-field__button--disabled'}`}
+                disabled={props.formIsDisabled}
+            >Submit guess</button>
         </form>
     )
 }

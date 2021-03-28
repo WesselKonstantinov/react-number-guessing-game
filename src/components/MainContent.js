@@ -12,7 +12,8 @@ class MainContent extends React.Component {
             guessCount: 1,
             userGuess: '',
             previousGuesses: [],
-            numberIsGuessed: false
+            numberIsGuessed: false,
+            formIsDisabled: false
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,7 +35,9 @@ class MainContent extends React.Component {
             return {
                 guessCount: prevState.guessCount + 1,
                 previousGuesses: [...prevState.previousGuesses, userGuess],
-                userGuess: ''
+                userGuess: '',
+                numberIsGuessed: (userGuess === prevState.randomNumber) ? true : false,
+                formIsDisabled: (userGuess === prevState.randomNumber) ? true : false
             };
         });
     }
@@ -45,11 +48,13 @@ class MainContent extends React.Component {
             guessCount: 1,
             userGuess: '',
             previousGuesses: [],
-            numberIsGuessed: false
+            numberIsGuessed: false,
+            formIsDisabled: false
         });
     }
 
     render() {
+        console.log(this.state.randomNumber);
         return (
             <main className="game__main-section">
                 <Explanation />
@@ -57,9 +62,10 @@ class MainContent extends React.Component {
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     userGuess={this.state.userGuess}
+                    formIsDisabled={this.state.formIsDisabled}
                 />
-                {(this.state.previousGuesses.length === 0) ? null : <Result previousGuesses={this.state.previousGuesses} />}
-                <StartNewGameButton handleClick={this.handleClick} />
+                {(this.state.previousGuesses.length === 0) ? null : <Result previousGuesses={this.state.previousGuesses} numberIsGuessed={this.state.numberIsGuessed} />}
+                {(!this.state.numberIsGuessed) ? null : <StartNewGameButton handleClick={this.handleClick} />}
             </main>
         )
     }
